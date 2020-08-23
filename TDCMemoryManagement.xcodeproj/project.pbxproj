@@ -13,6 +13,8 @@
 		C57400AA24EF6801008FAC79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57400A824EF6801008FAC79 /* Main.storyboard */; };
 		C57400AC24EF6802008FAC79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C57400AB24EF6802008FAC79 /* Assets.xcassets */; };
 		C57400AF24EF6802008FAC79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57400AD24EF6802008FAC79 /* LaunchScreen.storyboard */; };
+		C57400B824EF683B008FAC79 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57400B724EF683B008FAC79 /* Event.swift */; };
+		C57400BA24EF68CC008FAC79 /* Attendee.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57400B924EF68CC008FAC79 /* Attendee.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C57400AB24EF6802008FAC79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C57400AE24EF6802008FAC79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C57400B024EF6802008FAC79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C57400B724EF683B008FAC79 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		C57400B924EF68CC008FAC79 /* Attendee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendee.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,25 @@
 		C57400A124EF6801008FAC79 /* TDCMemoryManagement */ = {
 			isa = PBXGroup;
 			children = (
+				C57400A624EF6801008FAC79 /* ViewController.swift */,
+				C57400B724EF683B008FAC79 /* Event.swift */,
+				C57400B924EF68CC008FAC79 /* Attendee.swift */,
+				C57400B624EF680D008FAC79 /* SystemArchives */,
+			);
+			path = TDCMemoryManagement;
+			sourceTree = "<group>";
+		};
+		C57400B624EF680D008FAC79 /* SystemArchives */ = {
+			isa = PBXGroup;
+			children = (
 				C57400A224EF6801008FAC79 /* AppDelegate.swift */,
 				C57400A424EF6801008FAC79 /* SceneDelegate.swift */,
-				C57400A624EF6801008FAC79 /* ViewController.swift */,
 				C57400A824EF6801008FAC79 /* Main.storyboard */,
 				C57400AB24EF6802008FAC79 /* Assets.xcassets */,
 				C57400AD24EF6802008FAC79 /* LaunchScreen.storyboard */,
 				C57400B024EF6802008FAC79 /* Info.plist */,
 			);
-			path = TDCMemoryManagement;
+			name = SystemArchives;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C57400BA24EF68CC008FAC79 /* Attendee.swift in Sources */,
+				C57400B824EF683B008FAC79 /* Event.swift in Sources */,
 				C57400A724EF6801008FAC79 /* ViewController.swift in Sources */,
 				C57400A324EF6801008FAC79 /* AppDelegate.swift in Sources */,
 				C57400A524EF6801008FAC79 /* SceneDelegate.swift in Sources */,

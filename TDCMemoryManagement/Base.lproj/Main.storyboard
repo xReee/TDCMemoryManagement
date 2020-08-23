@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,61 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TDCMemoryManagement" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hrk-O6-XYv">
+                                <rect key="frame" x="168.5" y="144" width="77" height="30"/>
+                                <state key="normal" title="Start Event"/>
+                                <connections>
+                                    <action selector="didPressedStartEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="av8-17-X6b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoI-s7-GiI">
+                                <rect key="frame" x="172.5" y="207" width="69" height="30"/>
+                                <state key="normal" title="End Event"/>
+                                <connections>
+                                    <action selector="didPressedEndEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Y2-wP-DIi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyE-6X-qkM">
+                                <rect key="frame" x="159.5" y="289" width="95" height="30"/>
+                                <state key="normal" title="Start Atendee">
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressedStartAttendee:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JTB-gn-rxL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wtv-94-jus">
+                                <rect key="frame" x="163" y="352" width="88" height="30"/>
+                                <state key="normal" title="End Atendee">
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressedEndAttendee:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hMu-X0-6vU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Wtv-94-jus" firstAttribute="top" secondItem="JyE-6X-qkM" secondAttribute="bottom" constant="33" id="X0r-8Y-5pQ"/>
+                            <constraint firstItem="Hrk-O6-XYv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XFY-B4-ieo"/>
+                            <constraint firstItem="JyE-6X-qkM" firstAttribute="centerX" secondItem="IoI-s7-GiI" secondAttribute="centerX" id="avy-nk-DHT"/>
+                            <constraint firstItem="IoI-s7-GiI" firstAttribute="top" secondItem="Hrk-O6-XYv" secondAttribute="bottom" constant="33" id="kxS-HB-541"/>
+                            <constraint firstItem="JyE-6X-qkM" firstAttribute="top" secondItem="IoI-s7-GiI" secondAttribute="bottom" constant="52" id="poZ-nh-U2k"/>
+                            <constraint firstItem="Hrk-O6-XYv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="t8G-IE-lk8"/>
+                            <constraint firstItem="Wtv-94-jus" firstAttribute="centerX" secondItem="JyE-6X-qkM" secondAttribute="centerX" id="ueP-i2-saN"/>
+                            <constraint firstItem="IoI-s7-GiI" firstAttribute="centerX" secondItem="Hrk-O6-XYv" secondAttribute="centerX" id="w55-Dx-VLZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="78"/>
         </scene>
     </scenes>
 </document>
